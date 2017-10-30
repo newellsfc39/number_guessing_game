@@ -1,0 +1,67 @@
+/*
+YOU MAY MAKE UP YOUR OWN RULES !!!
+Clean up the functions  (i.e. make them neat !!!)
+add a function to display the random number if the player wants to bail !!!
+allow for 2 players
+keep track of the number of tries
+(maybe limit the player to 10 guesses)
+After an entered guess if there is no winner show the past guesses
+have a function to show the score
+use packages
+use FX
+store info in a file???
+
+// Globals
+const int ESC = 27;		
+int number; 		//Random Number that the computer generated !!
+int n[4];			// The 4 random numbers !!!!
+int guess[4];		// the 4 numbers that you guessed !!!
+int MyGuess;		// the entered player's guess !!!
+const int ROWS = 4;
+int RIGHT = 0;		// number of correct postions
+int WRONG = 0;		// number of incorrect positions
+
+// prototypes for your functions !!!!
+		 void error();// if you mess up
+		 void play();// generate a random number
+		 void player_guess();// enter a guess and call function winner
+		 void restore_the_screen();
+		 void reload();
+		 void winner();// do we have a winner?
+		 void menu(); // the main menu 
+*/
+
+
+
+
+MasterMind needs
+
+Consider making a limit on the number of guess's a user can have before being shut out.
+If one player quits, it should not disable the other persons turns but allow them to finish.
+
+
+
+
+
+For creating a secondary window window to capture user information
+
+Source code for creating a secondary window with initModality...however, modality can not 
+be changed / reestablished after setting to visible...so this will cause error the way 
+MasterMind is using it.
+
+
+newStage.initModality(Modality.APPLICATION_MODAL);	//to set this window as the top priority
+
+
+public void ButtonClicked(ActionEvent e)
+ {
+     if (e.getSource()==btnscene1)
+         newStage.showAndWait();
+     else
+         newStage.close();
+ }
+
+
+
+this is for the popup window.
+found at http://www.javafxtutorials.com/tutorials/creating-a-pop-up-window-in-javafx/
